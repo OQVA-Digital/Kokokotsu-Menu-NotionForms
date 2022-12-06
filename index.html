@@ -32,6 +32,21 @@
                 <div class="iframe_ctnr">
                     
                 </div>
+
+                <div class="side_section_ctnr about_us_ctnr">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis inventore veritatis quis iusto. Laudantium distinctio vitae <strong>nesciunt esse aspernatur</strong>, porro nostrum magni facilis eum labore harum quaerat doloribus tempore!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis est ab dicta aliquam beatae voluptatem aliquid, mollitia rem id sequi, <b>molestiae tempora sit ipsa fugiat enim repudiandae</b> obcaecati dolorum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis inventore veritatis quis iusto. Laudantium distinctio vitae nesciunt esse aspernatur, porro nostrum magni facilis eum labore harum quaerat doloribus tempore!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis est ab dicta aliquam beatae voluptatem aliquid, mollitia rem id sequi, molestiae tempora sit ipsa fugiat enim repudiandae obcaecati dolorum.</p>
+                </div>
+
+                <div class="side_section_ctnr events_ctnr">
+
+                </div>
+
+                <div class="side_section_ctnr contact_ctnr">
+
+                </div>
                 
                 <div class="checkout_footer">
 
@@ -95,7 +110,7 @@
                     <div class="sticky_ctnr">
     
                         <div class="order_cta" role="button">
-                            <span>Make your order 🥟</span>
+                            <span>🥟 Make your order 🥟</span>
                         </div>
                     </div>
 
@@ -121,43 +136,5 @@
         </div>
 
     </section>
-
-    <script>
-        
-        const orderCTA = document.querySelector('.order_cta')
-        const sideSec = document.querySelector('.side_section')
-        
-        const iframeCtnr = document.querySelector('.iframe_ctnr')
-        
-        let showingCart = false;
-
-        
-        function toggleSlide() {
-            if(showingCart == false) {
-                sideSec.style.transform = 'translate3d(0%, 0%, 0)';
-                showingCart = true;
-            } else {
-                sideSec.style.transform = 'translate3d(100%, 0%, 0)';
-                showingCart = false;
-            }
-        }
-
-        let isShowingIframe = false;
-
-        orderCTA.addEventListener('click', function() {
-            toggleSlide()
-
-            if(isShowingIframe == false) {
-                iframeCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
-                isShowingIframe = true;
-            }
-
-        })
-
-        // function clearForm() {
-        //     console.log('pera')
-        // }
-
-    </script>
 </body>
 </html>

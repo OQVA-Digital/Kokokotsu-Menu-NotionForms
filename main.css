@@ -238,7 +238,7 @@ html,
     position: relative;
     top: clamp(21rem, calc(62vw + calc(36vh - 8rem)), 65vh);
     z-index: 2;
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
   } .menu_ctnr {
     list-style: none;
     justify-content: flex-end;
@@ -318,7 +318,7 @@ html,
   } .social_bts a {
     width: clamp(1.8rem, 8vw, 2rem);
     height: clamp(1.8rem, 8vw, 2rem);
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     background-size: 50% 55%, cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -344,7 +344,7 @@ html,
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0;
     padding: 0 0 0 2em;
   } .flavours li {
     color:var(--light);
@@ -463,6 +463,7 @@ html,
     line-height: 1.4;
     padding: 1.6rem 0 0rem;
     /* position: absolute; */
+    justify-content: center;
   }
 
   .address, .veg, .job {
@@ -553,7 +554,7 @@ select:-webkit-autofill:focus {
 
 .menu_address_ctnr .sticky_ctnr {
   position: sticky;
-  bottom: 2rem;
+  bottom: clamp(1.5rem, 6vh, 2rem);
   left: 1.3rem;
   right: 1.5rem;
   z-index: 4;
@@ -573,20 +574,22 @@ select:-webkit-autofill:focus {
   font-size: clamp(0.7rem, 4vw, 1rem);
   font-weight: 100;
   letter-spacing: 0.1rem;
-  transition: box-shadow 1.5s ease;
+  transition: box-shadow 1.5s ease, filter 1.5s ease;
   cursor: pointer;
   border: 0.1rem solid var(--light);
   border-radius: 0.3rem;
-  box-shadow: 0 0.1rem var(--light), 0 0rem 0 -1rem var(--light);
+  box-shadow: 0 0.2rem var(--light);
   background-image: url(assets/noise.jpg);
   background-position: center;
   background-size: 31vh;
   user-select: none;
+  box-sizing: border-box;
 } .order_cta:hover {
-  box-shadow: 0 0.1rem var(--light), 0 0rem 2rem -1rem var(--light), 0 2rem 2rem var(--dark);
-  transition: box-shadow 0.5s ease;
+  box-shadow: 0 0.1rem var(--light), 0 0rem 2rem -1rem var(--light);
+  transition: box-shadow 0.5s ease, filter 0.2s ease;
+  filter: brightness(1.2);
 } .order_cta:active {
-  box-shadow: 0 0.1rem var(--light), 0 0rem 2.5rem -0.9rem var(--light), 0 2rem 2rem var(--dark);
+  box-shadow: 0 0.1rem var(--light), 0 0rem 2.5rem -0.9rem var(--light);
   transition: box-shadow 0.06s ease;
 } .order_cta.show_order_cta {
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease, visibility 0.15s ease, background-color 0.15s ease, box-shadow 0.2s ease;
@@ -842,11 +845,12 @@ select:-webkit-autofill:focus {
   border-top: 0.0625rem solid #161616;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
-  transition: background-color 0.4s ease;
+  transition: filter 0.4s ease;
   cursor: pointer;
   user-select: none;
   padding-left: 3rem;
   box-sizing: border-box;
+  filter: brightness(1);
 } .clear_cart {
   width: 25%;
   border-left: 0.0625rem solid #161616;
@@ -861,8 +865,8 @@ select:-webkit-autofill:focus {
   background-position: center;
   background-size: clamp(26vh, 16vw, 30vh);
 } .back_to_menu:hover, .clear_cart:hover {
-  background-color:#101010;
-  transition: background-color 0.05s ease;
+  transition: filter 0.05s ease;
+  filter: brightness(1.4);
 } .back_to_menu div {
   display: flex;
   gap:0.3rem;
@@ -872,7 +876,7 @@ select:-webkit-autofill:focus {
   border-top: 0.15rem solid var(--light);
   border-left: 0.15rem solid var(--light);
   display: block;
-  transform: rotate(-45deg) translate(25%, 0%);
+  transform: rotate(135deg) translate(25%, 0%);
 } .top_back_to_menu {
   color: #fff;
   align-self: flex-start;
@@ -936,30 +940,81 @@ gap: 0.8rem;
   
 flex: 1;
 } .nav_bts div[role='button'] {
-  text-align: center;
-  display: block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 0.8rem 0.4rem;
-  border: 0.1rem solid #333;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.1rem #333, 0 0rem 0 -1rem var(--lightb), 0 2rem 2rem var(--dark);
-  font-size: 0.85rem;
-  white-space: nowrap;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
-  cursor: pointer;
+  
+text-align: center;
+  
+display: block;
+  
+display: flex;
+  
+justify-content: center;
+  
+align-items: center;
+  
+flex: 1;
+  
+padding: 0.8rem 0.4rem;
+  
+border: 0.1rem solid #212121;
+  
+border-radius: 0.3rem;
+  
+font-size: 0.85rem;
+  
+white-space: nowrap;
+  
+transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  
+cursor: pointer;
 } .nav_bts div[role='button']:hover {
-  box-shadow: 0 0.1rem var(--lightb), 0 0rem 0 -1rem var(--lightb), 0 2rem 2rem var(--dark);
-  border-color:var(--lightb);
-  transition: border-color 0.06s ease, box-shadow 0.06s ease;
+  
+box-shadow: 0 0.1rem var(--lightb), 0 0rem 0 -1rem var(--lightb), 0 2rem 2rem var(--dark);
+  
+border-color:var(--lightb);
+  
+transition: border-color 0.06s ease, box-shadow 0.06s ease;
 }
 
+.side_section_ctnr {
 
+  position: absolute;
+  opacity:0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 7;
+}
 
+.about_us_ctnr {
 
+color: var(--light);
 
+padding: clamp(2rem, 12vw, 5rem);
+
+box-sizing: border-box;
+
+height: calc(100vh - clamp(4rem, 20vw, 5rem));
+
+overflow: auto;
+} .about_us_ctnr p {
+
+margin-bottom: 1rem;
+
+line-height: 1.7;
+
+color: #DDD;
+
+font-weight: 300;
+} .about_us_ctnr p strong, .about_us_ctnr p b {
+
+font-weight: 300;
+
+color: var(--light);
+}
+
+.side_section > div.show_side_content {
+  opacity:1;
+  visibility: visible;
+}
 
 
 
@@ -1267,13 +1322,14 @@ flex: 1;
   
   .left_ctnr {
     left: clamp(1.5rem, 8vw, 12rem);
-    top: 5rem;
+    top: 3.5rem;
     bottom: 5rem;
   }
   
   .logo {
     position: fixed;
     width: 80vh;
+    max-width: 52rem;
   } .slogan_ctnr {
     position: relative;
   }
@@ -1281,11 +1337,11 @@ flex: 1;
   .menu_ctnr {
     width: unset;
     padding: unset;
-    margin: 2rem 0 2rem;
+    margin: 2rem 0 1.5rem;
   } .bullets {
     position: relative;
     bottom: unset;
-    padding: 3rem 0 0rem;
+    padding: 1rem 0 1rem;
     background-image: unset;
     background-color: unset;
     border-top: unset;
@@ -1366,7 +1422,7 @@ flex: 1;
     
 flex-direction: row;
     
-margin: 0.2rem 0 0;
+margin: 0.3rem 0 0;
   } .nav_bts div[role='button'] {
   }
 
@@ -1375,13 +1431,11 @@ margin: 0.2rem 0 0;
   
   .order_cta {
     position: sticky;
-    bottom: 3.5rem;
+    bottom: clamp(2.5rem, 2vh, 3.5rem);
     left: clamp(1.5rem, 8vw, 12rem);
     right: unset;
-    /* width: clamp(20rem, 50vw, 38rem); */
     max-width: 38rem;
-    /* margin: 0 0 8rem; */
-    height: 3.2rem;
+    height: 3.1rem;
     font-size: 0.9rem;
   } .side_section {
     width: clamp(15rem, 83vw, 46rem);
@@ -1518,6 +1572,7 @@ top: 12vh;
     width: clamp(11rem, calc(80vw - 10rem), 32rem);
     flex: 1;
     height: unset;
+    margin-bottom: 3rem;
   } .slogan {
     left: 3rem;
   } .address {
