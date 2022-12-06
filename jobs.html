@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work with us! | Kokokotsu</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body class="jobs_body">
+    <section class="jobs_sec">
+        <div class="content">
+            <div class="neon"></div>
+   
+            <div class="left_ctnr">
+
+                <div class="job_ctnr">
+                    <a href="./index.html">Return</a>
+
+                    <picture class="logo_job" class="open_arms_doggo" loading="lazy">
+                        <source srcset="assets/logo.webp" type="image/webp">
+                        <source srcset="assets/logo.png" type="image/png">
+                        <img src="assets/logo.png" alt="Kokokotsu Logo" draggable="false">
+                    </picture>
+
+                    <h1>We are hiring! Apply here:</h1>
+
+                    <form name="jobApplicationForm" id="jobForm" method="POST" data-netlify="true">
+    
+                        <p class="job_description">
+                            <span>Gyoza Master</span>,<br>
+                            Bicester,<br>
+                            30hrs a week.<br>
+                            £10.50 per hour.<br>
+                            Wednesday - Sunday, <br>
+                            6pm-1am</p>
+                        <p>
+                          <label>Forename: <input type="text" name="forename" required/></label>
+                        </p>
+                        <p>
+                          <label>Surname: <input type="text" name="surname" required/></label>
+                        </p>
+                            <div class="over_18_ctnr">
+                                <label>Are you over 18? </label>
+    
+                                <div class="radios_ctnr">
+        
+                                    <div>
+                                        <label for="above-eighteen" class="over_18_input">
+                                            <input type="radio" name="above_eighteen" value="true" id="above-eighteen" required/>
+                                            Yes
+                                        </label>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="below-eighteen" class="below_18_input">
+                                            <input type="radio" name="above_eighteen" value="false" id="below-eighteen" required="false"/>
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                            
+                                <span class="underage_warning">You must be over 18 to submit on this job application.</span>
+                            </div>
+                        <fieldset>
+                            <legend>Which days are you regularly available from <b>6pm</b> to <b>1am</b>?</legend>
+
+                            <div class="checkboxes_ctnr">
+                                <div>
+                                    <input type="checkbox" id="monday" name="Day of the week" value="Monday">
+                                    <label for="monday">Monday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="tuesday" name="Day of the week" value="Tuesday">
+                                    <label for="tuesday">Tuesday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="wednesday" name="Day of the week" value="Wednesday">
+                                    <label for="wednesday">Wednesday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="thursday" name="Day of the week" value="Thursday">
+                                    <label for="thursday">Thursday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="friday" name="Day of the week" value="Friday">
+                                    <label for="friday">Friday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="saturday" name="Day of the week" value="Saturday">
+                                    <label for="saturday">Saturday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="sunday" name="Day of the week" value="Sunday">
+                                    <label for="sunday">Sunday</label>
+                                </div>
+                            </div>
+                          </fieldset>
+
+                          <p>
+                            <label>Phone number: <input type="tel" name="tel" required /></label>
+                          </p>
+
+                          <p>
+                            <label>Email: <input type="email" name="email" required /></label>
+                          </p>
+
+                        <p>
+                          <button class="submit" type="submit">Submit</button>
+                        </p>
+                      </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    function formSuccess() {
+        const submitBt = document.querySelector('.submit');
+
+        setTimeout(() => {
+            submitBt.innerHTML = "Job application sent. Thanks!"
+        }, 300);
+
+        let allInputs = document.querySelectorAll('input');
+
+        for(i=0;i<allInputs.length;i++) {
+            allInputs[i].value = "";
+            allInputs[i].checked = false;
+        }
+    }
+    
+    const below18Input = document.querySelector('.below_18_input input')
+    const underAgeWarning = document.querySelector('.underage_warning')
+    const over18Input = document.querySelector('.over_18_input input')
+
+    below18Input.addEventListener('click', function() {
+        this.checked = false;
+
+        underAgeWarning.style.display = 'initial';
+    })
+
+    over18Input.addEventListener('click', function() {
+        underAgeWarning.style.display = 'none';
+    })
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    let myForm = document.getElementById("jobForm");
+    let formData = new FormData(myForm);
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+    })
+        .then(() => formSuccess())
+        .catch((error) => alert(error));
+    };
+
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    document.querySelector('input').focus()
+</script>
+
+<script>
+    const parallaxEl = document.querySelector('.job_description')
+    
+    let windowPosition;
+    windowPosition = window.pageYOffset;
+    
+    if(window.matchMedia('(orientation:landscape) and (min-width:800px)').matches) {
+    
+        parallaxEl.style.transform = `translate(110%, ${windowPosition / 1.5}px)`;
+        
+        document.body.onscroll = function() {
+            windowPosition = window.pageYOffset;
+    
+            parallaxEl.style.transform = `translate(110%, ${windowPosition / 1.5}px)`;
+        }
+        
+        windowPosition = window.pageYOffset;
+    }
+</script>
+</html>
