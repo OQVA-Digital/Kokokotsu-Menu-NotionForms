@@ -604,7 +604,7 @@ select:-webkit-autofill:focus {
 } .iframe_ctnr {
 } .side_section iframe {
   margin-bottom: 2rem;
-} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;}
+} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;}
 
 .menu_address_ctnr .sticky_ctnr {
   position: sticky;
