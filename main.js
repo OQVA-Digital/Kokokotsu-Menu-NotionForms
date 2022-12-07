@@ -63,7 +63,7 @@
 
                 } else if(this.id == 'events-bt') {
 
-                    eventsCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
+                    eventsCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="480px" src="https://notionforms.io/forms/kokokotsu-events-form"></iframe>'
                     eventsCtnr.classList.add('show_side_content')
 
                     
@@ -72,7 +72,7 @@
 
                 } else if(this.id == 'contact-bt') {
 
-                    contactCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
+                    contactCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="480px" src="https://notionforms.io/forms/kokokotsu-contact-form"></iframe>'
 
                     contactCtnr.classList.add('show_side_content')
 
