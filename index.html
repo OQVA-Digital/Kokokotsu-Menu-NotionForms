@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93ENQ68ZPR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-93ENQ68ZPR');
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kokokotsu | Comic & Japanese Food</title>
     <link rel="stylesheet" href="./main.css">
+
     <script src="./main.js" defer></script>
+    <script src="./work-with-us-form.js" defer></script>
+    <script src="./gyoza-san.js" defer></script>
+
+    <meta name="google-site-verification" content="k56UBytYxNoGz_bLuTsLY6YCcvG0UVGjOTf0fwdRPhY" />
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -26,6 +43,82 @@
             </picture>
 
 
+
+
+
+            <div class="left_ctnr">
+                <div class="slogan_ctnr">
+                    <div class="social_bts">
+                        <a href="https://instagram.com/kokokotsu.co" target="_blank" class="instagram_bt" rel="external"></a>
+
+                        <a href="https://www.tiktok.com/@kokokotsu.co" target="_blank" class="tiktok_bt" rel="external"></a>
+                    </div>
+    
+                    <h1 class="slogan">Japan<br>in<br>a<br>pan.</h1>
+                </div>
+
+                <aside class="gyosa_san_ctnr">
+                    <div class="box">
+                        <img class="gyoza_san step1" src="assets/gyoza-san.png" alt="">
+                    </div>
+                </aside>
+
+                <div class="menu_address_ctnr">
+                    <ul class="menu_ctnr">
+                        
+                        <!-- <div class="divider hidden_desktop"></div> -->
+                        
+                        <li>
+                            <div>
+                                <h2>Gyoza</h2>
+                                <div class="divider"></div>
+                                <div class="price_ctnr">
+                                    <span class="price">£10</span>
+                                </div>
+                            </div>
+        
+                            <sub>
+                                <p><strong>Seven delicious pouches of umami goodness, crunchy on one side and soft on the other.</strong></p>
+                                <p>We're not here to lie, using chopsticks does make you look cool... but Gyoza do taste better if just grab them with your hands.</p>
+
+                                <ul class="flavours">
+                                    <li>Pork</li>
+                                    <li>Chicken</li>
+                                    <li>Vegetable</li>
+                                    <li>Prawn</li>
+                                    <li>Duck</li>
+                                </ul>
+                            </sub>
+                        </li>
+                    </ul>
+                    
+
+                    <div class="sticky_ctnr">
+    
+                        <div class="order_cta" role="button">
+                            <span>Order now 🥟</span>
+                        </div>
+                    </div>
+
+                    <nav class="nav_bts">
+                        <div class="flex">
+                            <div id="work-with-us-bt" role="button">Work with us</div>
+                            <div id="who-we-are-bt" role="button">Who we are</div>
+                        </div>
+
+
+                        <div class="flex">
+                            <div id="events-bt" role="button">Events</div>
+                            <div id="contact-bt" role="button">Contact</div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+
+
+
+
             <section class="side_section">
                 <div class="neon"></div>
 
@@ -34,14 +127,105 @@
                 </div>
 
                 <div class="side_section_ctnr work_with_us_ctnr">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, modi consequuntur. Recusandae maiores enim ab nobis perspiciatis doloribus mollitia veniam iusto nihil eligendi. Ratione quidem at quos ab expedita inventore!
+                    <h3>We are hiring! Apply here:</h3>
+
+                    <form name="jobApplicationForm" id="jobForm" method="POST" data-netlify="true">
+    
+                          <label>Forename: <input type="text" name="forename" required/></label>
+                        </p>
+                        <p>
+                          <label>Surname: <input type="text" name="surname" required/></label>
+                        </p>
+                            <div class="over_18_ctnr">
+                                <label>Are you over 18? </label>
+    
+                                <div class="radios_ctnr">
+        
+                                    <div>
+                                        <label for="above-eighteen" class="over_18_input">
+                                            <input type="radio" name="above_eighteen" value="true" id="above-eighteen" required/>
+                                            Yes
+                                        </label>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="below-eighteen" class="below_18_input">
+                                            <input type="radio" name="above_eighteen" value="false" id="below-eighteen" required="false"/>
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                            
+                                <span class="underage_warning">You must be over 18 to submit on this job application.</span>
+                            </div>
+                        <fieldset>
+                            <legend>Which days are you regularly available from <b>6pm</b> to <b>1am</b>?</legend>
+
+                            <div class="checkboxes_ctnr">
+                                <div>
+                                    <input type="checkbox" id="monday" name="Day of the week" value="Monday">
+                                    <label for="monday">Monday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="tuesday" name="Day of the week" value="Tuesday">
+                                    <label for="tuesday">Tuesday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="wednesday" name="Day of the week" value="Wednesday">
+                                    <label for="wednesday">Wednesday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="thursday" name="Day of the week" value="Thursday">
+                                    <label for="thursday">Thursday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="friday" name="Day of the week" value="Friday">
+                                    <label for="friday">Friday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="saturday" name="Day of the week" value="Saturday">
+                                    <label for="saturday">Saturday</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="sunday" name="Day of the week" value="Sunday">
+                                    <label for="sunday">Sunday</label>
+                                </div>
+                            </div>
+                          </fieldset>
+
+                          <p>
+                            <label>Phone number: <input type="tel" name="tel" required /></label>
+                          </p>
+
+                          <p>
+                            <label>Email: <input type="email" name="email" required /></label>
+                          </p>
+
+                        <p>
+                          <button class="submit" type="submit">Submit</button>
+                        </p>
+                      </form>
                 </div>
 
                 <div class="side_section_ctnr about_us_ctnr">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis inventore veritatis quis iusto. Laudantium distinctio vitae <strong>nesciunt esse aspernatur</strong>, porro nostrum magni facilis eum labore harum quaerat doloribus tempore!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis est ab dicta aliquam beatae voluptatem aliquid, mollitia rem id sequi, <b>molestiae tempora sit ipsa fugiat enim repudiandae</b> obcaecati dolorum.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis inventore veritatis quis iusto. Laudantium distinctio vitae nesciunt esse aspernatur, porro nostrum magni facilis eum labore harum quaerat doloribus tempore!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis est ab dicta aliquam beatae voluptatem aliquid, mollitia rem id sequi, molestiae tempora sit ipsa fugiat enim repudiandae obcaecati dolorum.</p>
+
+                    <img src="assets/product-shot-01.jpg" alt="Product shot" loading="lazy" draggable="false">
+
+                    <p>Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Pra lá , depois divoltis porris, paradis.Quem num gosta di mé, boa gentis num é.</p>
+
+                    <p>Cevadis im ampola pa arma uma pindureta.Mé faiz elementum girarzis, nisi eros vermeio.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Suco de cevadiss deixa as pessoas mais interessantis.</p>
+
+                    <a class="social_img" href="https://www.instagram.com/p/CcxXEAtoN67/">
+                        <img src="assets/insta-post.jpg" alt="Social media shot" loading="lazy" draggable="false">
+                    </a>
+                    
+                    <p>Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Quem num gosta di mé, boa gentis num é.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.In elementis mé pra quem é amistosis quis leo.</p>
                 </div>
 
                 <div class="side_section_ctnr events_ctnr">
@@ -67,72 +251,6 @@
             </section>
 
 
-
-
-
-            <div class="left_ctnr">
-                <div class="slogan_ctnr">
-                    <div class="social_bts">
-                        <a href="https://instagram.com/kokokotsu.co" target="_blank" class="instagram_bt" rel="external"></a>
-
-                        <a href="https://www.tiktok.com/@kokokotsu.co" target="_blank" class="tiktok_bt" rel="external"></a>
-                    </div>
-    
-                    <h1 class="slogan">Japan<br>in<br>a<br>pan.</h1>
-                </div>
-
-                <div class="menu_address_ctnr">
-                    <ul class="menu_ctnr">
-                        
-                        <!-- <div class="divider hidden_desktop"></div> -->
-                        
-                        <li>
-                            <div>
-                                <h2>Gyoza</h2>
-                                <div class="divider"></div>
-                                <div class="price_ctnr">
-                                    <span class="price">£10</span>
-                                </div>
-                            </div>
-        
-                            <sub>
-                                <p><strong>Seven delicious pouches of umami goodness, crunchy on one side and soft on the other.</strong></p>
-                                <p>We're not here to lie, using chopsticks does make you look cool... but Gyoza do taste better if just grab them with your hands.</p>
-
-                                <ul class="flavours">
-                                    <li>Pork</li>
-                                    <li>Chicken</li>
-                                    <li>Vegetable</li>
-                                    <!-- <li>Prawn</li>
-                                    <li>Duck</li> -->
-                                </ul>
-                            </sub>
-                        </li>
-                    </ul>
-                    
-
-                    <div class="sticky_ctnr">
-    
-                        <div class="order_cta" role="button">
-                            <span>🥟 Order now</span>
-                        </div>
-                    </div>
-
-                    <nav class="nav_bts">
-                        <div class="flex">
-                            <div id="work-with-us-bt" role="button">Work with us</div>
-                            <div id="who-we-are-bt" role="button">Who we are</div>
-                        </div>
-
-
-                        <div class="flex">
-                            <div id="events-bt" role="button">Events</div>
-                            <div id="contact-bt" role="button">Contact</div>
-                        </div>
-                    </nav>
-
-                </div>
-            </div>
         </div>
 
     </section>
