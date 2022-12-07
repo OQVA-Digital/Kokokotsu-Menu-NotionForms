@@ -29,9 +29,10 @@
                 iframeCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
                 showingIframe = true;
 
-                document.querySelector('.about_us_ctnr').classList.remove('show_side_content')
-                document.querySelector('.events_ctnr').classList.remove('show_side_content')
-                document.querySelector('.contact_ctnr').classList.remove('show_side_content')
+                workWithUsCtnr.classList.remove('show_side_content')
+                aboutUsCtnr.classList.remove('show_side_content')
+                eventsCtnr.classList.remove('show_side_content')
+                contactCtnr.classList.remove('show_side_content')
             }
             
             toggleSlide()
@@ -43,6 +44,7 @@
         const aboutUsCtnr = document.querySelector('.about_us_ctnr')
         const eventsCtnr = document.querySelector('.events_ctnr')
         const contactCtnr = document.querySelector('.contact_ctnr')
+        const workWithUsCtnr = document.querySelector('.work_with_us_ctnr')
 
         for(i=0;i<secondaryBts.length;i++) {
 
@@ -54,21 +56,33 @@
 
                 toggleSlide()
 
-                if(this.id == "who-we-are-bt") {
+                if (this.id == "work-with-us-bt") {
+
+                    workWithUsCtnr.classList.add('show_side_content')
+                    
+                    eventsCtnr.classList.remove('show_side_content')
+                    contactCtnr.classList.remove('show_side_content')
+                    aboutUsCtnr.classList.remove('show_side_content')
+
+
+                } else if(this.id == "who-we-are-bt") {
 
                     aboutUsCtnr.classList.add('show_side_content')
                     
+                    workWithUsCtnr.classList.remove('show_side_content')
                     eventsCtnr.classList.remove('show_side_content')
                     contactCtnr.classList.remove('show_side_content')
 
                 } else if(this.id == 'events-bt') {
 
                     eventsCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="480px" src="https://notionforms.io/forms/kokokotsu-events-form"></iframe>'
+
                     eventsCtnr.classList.add('show_side_content')
 
                     
                     aboutUsCtnr.classList.remove('show_side_content')
                     contactCtnr.classList.remove('show_side_content')
+                    workWithUsCtnr.classList.remove('show_side_content')
 
                 } else if(this.id == 'contact-bt') {
 
@@ -76,7 +90,7 @@
 
                     contactCtnr.classList.add('show_side_content')
 
-                    
+                    workWithUsCtnr.classList.remove('show_side_content')
                     eventsCtnr.classList.remove('show_side_content')
                     aboutUsCtnr.classList.remove('show_side_content')
 

@@ -913,50 +913,44 @@ select:-webkit-autofill:focus {
 }
 
 .nav_bts {
-color: #DDD;
-display: flex;
-flex-direction: column;
-gap: 0.8rem;
-max-width: 38rem;
-justify-content: space-evenly;
-margin: 1rem 0 0 0;
-/* position: absolute; */
-width: 100%;
-} .nav_bts .flex {
-  
+
+color: #DDD;
+
 display: flex;
-  
+
+flex-direction: column;
+
 gap: 0.8rem;
-  
-flex: 1;
-} .nav_bts div[role='button'], .nav_bts a {
-  
-text-align: center;
-  
-display: block;
-  
-display: flex;
-  
-justify-content: center;
-  
-align-items: center;
-  
-flex: 1;
-  
-padding: 0.8rem 0.4rem;
-  
-border: 0.1rem solid #212121;
-  
-border-radius: 0.3rem;
-  
-font-size: 0.85rem;
-  
-white-space: nowrap;
-  
-transition: border-color 0.5s ease, box-shadow 0.5s ease;
-  
-cursor: pointer;
-} .nav_bts div[role='button']:hover, .nav_bts a:hover {
+
+max-width: 38rem;
+
+justify-content: space-evenly;
+
+margin: 1rem 0 0 0;
+
+/* position: absolute; */
+
+width: 100%;
+} .nav_bts .flex {
+  display: flex;
+  gap: 0.8rem;
+  flex: 1;
+  flex-flow: row wrap;
+} .nav_bts div[role='button'] {
+  text-align: center;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0.8rem 0.6rem;
+  border: 0.1rem solid #212121;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+} .nav_bts div[role='button']:hover {
   
 box-shadow: 0 0.1rem var(--lightb), 0 0rem 0 -1rem var(--lightb), 0 2rem 2rem var(--dark);
   
@@ -1316,7 +1310,7 @@ color: var(--light);
   
   .left_ctnr {
     left: clamp(1.5rem, 8vw, 12rem);
-    top: 3.5rem;
+    top: 4.5rem;
     bottom: 5rem;
   }
   
@@ -1413,11 +1407,10 @@ color: var(--light);
 
 
   .nav_bts {
-    
-flex-direction: row;
-    
-margin: 0.3rem 0 0;
+    flex-flow: row wrap;
+    margin: 0.3rem 0 0;
   } .nav_bts div[role='button'] {
+  padding: 0.9rem 1rem;
   }
 
 
