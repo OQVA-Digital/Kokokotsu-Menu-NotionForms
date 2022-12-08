@@ -323,15 +323,17 @@ html,
     width: clamp(1.8rem, 8vw, 2rem);
     height: clamp(1.8rem, 8vw, 2rem);
     border-radius: 0.3rem;
-    background-size: 50% 55%, cover;
+    background-size: 50% 55%, clamp(26vh, 16vw, 30vh);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #0C0C0C;
+    /* background-color: #0C0C0C; */
     border: 0.1rem solid #222;
+    /* background-image: url(assets/noise.jpg), -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x); */
+    background-position: center;
   } .tiktok_bt {
-    background-image: url(assets/tiktok.svg);
+    background-image: url(assets/tiktok.svg), -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
   } .instagram_bt {
-    background-image: url(assets/instagram.svg);
+    background-image: url(assets/instagram.svg), -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
   } .slogan {
     /* position: absolute;
     top: 3.5rem;
@@ -428,23 +430,32 @@ html,
   }
 
 .gyosa_san_ctnr {
-  position: absolute;
-  width: clamp(9rem, 55vw, 20rem);
-  height: clamp(6rem, calc(130vw - 22rem), 13rem);
-  left: 0;
-  bottom: calc(clamp(8rem, calc(30vw + 28vh - 9rem), 17rem) * -1);
-  /* border: 0.1rem solid #222; */
-  z-index: 0;
-  animation: gyoza-san-intro-Y 3s ease-out 1;
+  
+position: absolute;
+  
+width: clamp(9rem, 55vw, 20rem);
+  
+height: clamp(6rem, calc(130vw - 22rem), 13rem);
+  
+left: 0;
+  
+bottom: calc(clamp(8rem, calc(30vw + 28vh - 9rem), 17rem) * -1);
+  
+/* border: 0.1rem solid #222; */
+  
+z-index: 0;
+  
+animation: gyoza-san-intro-Y 2.5s ease-in-out 1;
 } .gyosa_san_ctnr .box {
-  animation: gyoza-san-intro-X 3s ease-in-out 1;
+  animation: gyoza-san-intro-X 2.5s ease-in-out 1;
   position: absolute;
   bottom: 0;
-  width: clamp(7rem, 38vw, 11rem);
+  width: clamp(7rem, 38vw, 10rem);
   left: 0;
-  height: clamp(5rem, 70%, 8rem);
+  height: clamp(5rem, 70%, 7rem);
   transition: transform 0.5s ease;
   /* transform: translate3D(calc(clamp(15rem, 30vw, 40rem) * -1), 0, 0rem); */
+  cursor: pointer;
   }  .gyosa_san_ctnr .box img {
   width: 100%;
   object-fit: contain;
@@ -459,15 +470,15 @@ html,
   } 40% {
     transform:translateX(calc(clamp(15rem, 30vw, 40rem) * -1)) rotateY(90deg);
   } 80% {
-    transform: translateX(0) rotateY(0deg);
+    transform: translateX(0) rotateY(5deg);
   }
 }
   
 @keyframes gyoza-san-intro-Y {
   0% {
-    transform:translateY(10rem)
+    transform:translateY(10vw)
   } 40% {
-    transform:translateY(10rem)
+    transform:translateY(10vw)
   } 80% {
     transform: translateY(0);
   }
@@ -475,13 +486,54 @@ html,
   
 
 
+.gyoza_rain_ctnr {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  transition: opacity 0.4s ease-out;
+} .gyoza_rain_ctnr .gyoza {
+
+position: absolute;
+
+background-image: url(assets/gyoza-rain.png);
+
+background-repeat: no-repeat;
+
+background-size: contain;
+
+transition: transform 5s ease;
+
+right: 0;
+top:0;
+right: -12rem;
+}
+
+@keyframes gyoza_fall {
+  0% {
+    transform: translate3d(50rem, -250vh, 0);
+  } 100% {
+    transform: translate3d(-160rem, 150vh, 0);
+  }
+}
 
 
+.gyoza.size1 {
+  
+} .gyoza.size2 {
+  
+} .gyoza.size3 {
 
-
-
+}
 
   
+.gyoza.g1 {
+} .gyoza.g2 {
+} .gyoza.g3 {
+} .gyoza.g4 {
+} .gyoza.g5 {
+} .gyoza.g6 {
+}
   
   
   
@@ -997,20 +1049,42 @@ flex: 1;
   
 flex-flow: row wrap;
 } .nav_bts div[role='button'] {
-  text-align: center;
-  display: block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 0.8rem 0.6rem;
-  border: 0.1rem solid #212121;
-  border-radius: 0.3rem;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
-  cursor: pointer;
-  user-select: none;
+  
+text-align: center;
+  
+display: block;
+  
+display: flex;
+  
+justify-content: center;
+  
+align-items: center;
+  
+flex: 1;
+  
+padding: 1rem 0.6rem;
+  
+border: 0.1rem solid #212121;
+  
+border-radius: 0.3rem;
+  
+font-size: 0.85rem;
+  
+white-space: nowrap;
+  
+transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  
+cursor: pointer;
+  
+user-select: none;
+  
+background-image: url(assets/noise.jpg);
+  
+background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
+  
+background-position: center;
+  
+background-size: clamp(26vh, 16vw, 30vh);
 } .nav_bts div[role='button']:hover {
   
 box-shadow: 0 0.1rem var(--lightb), 0 0rem 0 -1rem var(--lightb), 0 2rem 2rem var(--dark);
@@ -1426,12 +1500,11 @@ width: unset;
     top: 20vh; */
   }
   .social_bts a {
-    background-color:transparent;
-    transition: background-color 0.5s ease;
+    transition: filter 0.5s ease;
     border-color: #111;
   }.social_bts a:hover {
-    background-color:#111;
-    transition: background-color 0s ease;
+    filter: brightness(1.5);
+    transition: filter 0.1s ease;
   }
 
   .intro_cta {
@@ -1498,6 +1571,7 @@ flex-flow: row wrap;
 margin: 0.6rem 0 0;
   } .nav_bts div[role='button'] {
   padding: 0.9rem 1rem;
+  padding: 0.7rem 0.6rem;
   }
 
 
@@ -1532,6 +1606,14 @@ margin: 0.6rem 0 0;
     margin-bottom: unset;
   }
   
+  
+    /* @keyframes gyoza_fall {
+      0% {
+        transform: translate3d(50vw, -50vh, 0);
+      } 100% {
+        transform: translate3d(-100vw, 150vh, 0);
+      }
+    } */
 }
 
 
