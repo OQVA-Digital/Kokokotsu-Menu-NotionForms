@@ -491,7 +491,8 @@ animation: gyoza-san-intro-Y 2.5s ease-in-out 1;
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
 } .gyoza_rain_ctnr .gyoza {
 
 position: absolute;
@@ -506,14 +507,15 @@ transition: transform 5s ease;
 
 right: 0;
 top:0;
-right: -12rem;
+right: -30rem;
+will-change: transform;
 }
 
 @keyframes gyoza_fall {
   0% {
-    transform: translate3d(50rem, -250vh, 0);
+    transform: translate3d(50rem, -250vh, 0) rotate(0deg);
   } 100% {
-    transform: translate3d(-160rem, 150vh, 0);
+    transform: translate3d(-160rem, 150vh, 0) rotate(-30deg);
   }
 }
 
@@ -625,7 +627,7 @@ select:-webkit-autofill:focus {
   bottom: 0;
   width: calc(100% - clamp(0.15rem, 0.8vw, 0.2rem));
   max-width: 37rem;
-  z-index: 6;
+  z-index: 12;
   transition: transform 0.45s cubic-bezier(0.39, 0.58, 0.57, 1);
   transform: translateX(100%);
   background-color: var(--dark);
