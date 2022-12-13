@@ -439,20 +439,36 @@ height: clamp(6rem, calc(130vw - 22rem), 13rem);
   
 left: 0;
   
-bottom: calc(clamp(8rem, calc(30vw + 28vh - 9rem), 17rem) * -1);
+bottom: calc(clamp(9rem, calc(28vw + 29vh - 9rem), 17rem) * -1);
   
 /* border: 0.1rem solid #222; */
   
 z-index: 0;
   
-animation: gyoza-san-intro-Y 2.5s ease-in-out 1;
-} .gyosa_san_ctnr .box {
-  animation: gyoza-san-intro-X 2.5s ease-in-out 1;
+z-index: 10;
+}
+  
+  
+@keyframes gyoza-san-intro-X {
+  0% {
+    opacity: 0;
+    transform:translateX(calc(clamp(15rem, 30vw, 40rem) * -1));
+  } 50% {
+    opacity: 0;
+    transform:translateX(calc(clamp(15rem, 30vw, 40rem) * -1));
+  } 100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.gyosa_san_ctnr .box {
+  animation: gyoza-san-intro-X 1.2s cubic-bezier(0, 0, 0.2, 1) 1;
   position: absolute;
   bottom: 0;
-  width: clamp(7rem, 38vw, 10rem);
+  width: clamp(7rem, 33vw, 10rem);
   left: 0;
-  height: clamp(5rem, 70%, 7rem);
+  height: clamp(7rem, 85%, 9rem);
   transition: transform 0.5s ease;
   /* transform: translate3D(calc(clamp(15rem, 30vw, 40rem) * -1), 0, 0rem); */
   cursor: pointer;
@@ -460,28 +476,60 @@ animation: gyoza-san-intro-Y 2.5s ease-in-out 1;
   width: 100%;
   object-fit: contain;
   height: 100%;
+  position: absolute;
 } .gyoza_san.step1 {
-}
+} .gyosa_san_ctnr .click_me {
   
+position: absolute;
   
-@keyframes gyoza-san-intro-X {
-  0% {
-    transform:translateX(calc(clamp(15rem, 30vw, 40rem) * -1)) rotateY(90deg);
-  } 40% {
-    transform:translateX(calc(clamp(15rem, 30vw, 40rem) * -1)) rotateY(90deg);
-  } 80% {
-    transform: translateX(0) rotateY(5deg);
-  }
-}
+top: calc(clamp(20%, calc(19vh - 35vw), 150%) * -1);
   
-@keyframes gyoza-san-intro-Y {
-  0% {
-    transform:translateY(10vw)
-  } 40% {
-    transform:translateY(10vw)
-  } 80% {
-    transform: translateY(0);
-  }
+right: calc(clamp(2rem, 75%, 80%) * -1);
+  
+/* transform: translate(clamp(2rem, 25vw, 80%), calc(clamp(100%, calc(27vh - 35vw), 150%) * -1)); */
+  
+transform:translateY(0%);
+  
+opacity:1;
+  
+visibility: visible;
+  
+color: var(--light);
+  
+background-color: #101010;
+  
+padding: clamp(0.2rem, 1.5vw, 0.4rem) clamp(0.3rem, 2.5vw, 0.6rem);
+  
+text-align: center;
+  
+font-weight: 300;
+  
+font-size: clamp(0.6rem, 3vw, 0.75rem);
+  
+white-space: nowrap;
+  
+border-radius: 0.2rem;
+  
+border: 0.1rem solid #333;
+  
+user-select: none;
+  
+transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}  .gyosa_san_ctnr .click_me::before {
+  content:'';
+  position:absolute;
+  bottom: -0.5rem;
+  left: 0.1rem;
+  border-right: 0.4rem solid #333;
+  border-top: 0.4rem solid #0000;
+  border-left: 0.4rem solid #0000;
+  border-bottom: 0.4rem solid #0000;
+  transform: rotate(45deg);
+  z-index: -1;
+} .gyosa_san_ctnr .click_me.hidden {
+  opacity:0;
+  visibility: hidden;
+  transform:translateY(50%);
 }
   
 
@@ -497,7 +545,9 @@ animation: gyoza-san-intro-Y 2.5s ease-in-out 1;
 
 position: absolute;
 
-background-image: url(assets/gyoza-rain.png);
+background-image: url(assets/gyoza-chars/default.png);
+  
+background-image: -webkit-image-set(url(assets/gyoza-chars/default.jpg) 1x, url(assets/gyoza-chars/default.webp) 1x);
 
 background-repeat: no-repeat;
 
@@ -509,6 +559,21 @@ right: 0;
 top:0;
 right: -30rem;
 will-change: transform;
+} .gyoza_rain_ctnr .gyoza.char1 {
+  background-image: url(assets/gyoza-chars/chicken.png);
+  background-image: -webkit-image-set(url(assets/gyoza-chars/chicken.png) 1x, url(assets/gyoza-chars/chicken.webp) 1x);
+} .gyoza_rain_ctnr .gyoza.char2 {
+  background-image: url(assets/gyoza-chars/pork.png);
+  background-image: -webkit-image-set(url(assets/gyoza-chars/pork.png) 1x, url(assets/gyoza-chars/pork.webp) 1x);
+} .gyoza_rain_ctnr .gyoza.char3 {
+  background-image: url(assets/gyoza-chars/duck.png);
+  background-image: -webkit-image-set(url(assets/gyoza-chars/duck.png) 1x, url(assets/gyoza-chars/duck.webp) 1x);
+} .gyoza_rain_ctnr .gyoza.char4 {
+  background-image: url(assets/gyoza-chars/prawn.png);
+  background-image: -webkit-image-set(url(assets/gyoza-chars/prawn.png) 1x, url(assets/gyoza-chars/prawn.webp) 1x);
+} .gyoza_rain_ctnr .gyoza.char5 {
+  background-image: url(assets/gyoza-chars/vegetable.png);
+  background-image: -webkit-image-set(url(assets/gyoza-chars/vegetable.png) 1x, url(assets/gyoza-chars/vegetable.webp) 1x);
 }
 
 @keyframes gyoza_fall {
@@ -518,25 +583,6 @@ will-change: transform;
     transform: translate3d(-160rem, 150vh, 0) rotate(-30deg);
   }
 }
-
-
-.gyoza.size1 {
-  
-} .gyoza.size2 {
-  
-} .gyoza.size3 {
-
-}
-
-  
-.gyoza.g1 {
-} .gyoza.g2 {
-} .gyoza.g3 {
-} .gyoza.g4 {
-} .gyoza.g5 {
-} .gyoza.g6 {
-}
-  
   
   
   
@@ -632,13 +678,14 @@ select:-webkit-autofill:focus {
   transform: translateX(100%);
   background-color: var(--dark);
   background-image: url(assets/noise.jpg);
+  background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
   background-position: center;
   background-size: clamp(26vh, 16vw, 30vh);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: clamp(0.9rem, 1vw, 0.98rem);
+  font-size: clamp(0.9rem, 1vw, 0.97rem);
 } .side_section > .content {
   font-size: clamp(0.7rem, 3.6vw, 1rem);
   color: var(--light);
@@ -1134,14 +1181,18 @@ margin-bottom: 2rem;
 
 margin-bottom: 1rem;
 
-line-height: 1.7;
+line-height: 1.65;
 
 color: #DDD;
 
 font-weight: 300;
 }  .about_us_ctnr h1 {
 
-  margin-bottom: 1.4rem;
+margin-bottom: 1.4rem;
+
+font-weight: 500;
+
+font-size: 1.2rem;
 } .about_us_ctnr p strong, .about_us_ctnr p b {
 
 font-weight: 300;
@@ -1672,6 +1723,8 @@ margin: 0.6rem 0 0;
     border-radius: 0.5rem 3rem 0.5rem 0.5rem;
     border: 0.0625rem solid #131313;
     background-image: linear-gradient(45deg, #ffffff03, #ffffff03), url(assets/noise.jpg);
+  
+    background-image: linear-gradient(45deg, #ffffff03, #ffffff03), -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
     background-position: center;
     background-size: cover, 31vh;
     box-shadow: 0 1rem 1.5rem -0.9rem #000;
