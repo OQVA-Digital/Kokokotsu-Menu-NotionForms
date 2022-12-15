@@ -338,7 +338,7 @@ html,
     /* position: absolute;
     top: 3.5rem;
     left: clamp(1.5rem, 9vw, 3rem); */
-    font-size: clamp(1.6rem, calc(2vh + 2vw), 1.8rem);
+    font-size: clamp(1.6rem, calc(2vh + 2vw), 1.7rem);
     font-weight: 600;
     text-transform: uppercase;
     background: -webkit-linear-gradient(30deg, #fffc00, #ff9c00, #f000ff,#00baff, #0f6);
@@ -435,15 +435,13 @@ position: absolute;
   
 width: clamp(9rem, 55vw, 20rem);
   
-height: clamp(6rem, calc(130vw - 22rem), 13rem);
+height: clamp(6rem, calc(130vw - 22rem), 12.5rem);
   
-left: 0;
+left: calc(clamp(1.5rem, 9vw, 3rem) * -0.7);
   
 bottom: calc(clamp(9rem, calc(28vw + 29vh - 9rem), 17rem) * -1);
   
 /* border: 0.1rem solid #222; */
-  
-z-index: 0;
   
 z-index: 10;
 }
@@ -466,71 +464,22 @@ z-index: 10;
   animation: gyoza-san-intro-X 1.2s cubic-bezier(0, 0, 0.2, 1) 1;
   position: absolute;
   bottom: 0;
-  width: clamp(7rem, 33vw, 10rem);
+  width: clamp(7rem, 42vw, 10rem);
   left: 0;
-  height: clamp(7rem, 85%, 9rem);
-  transition: transform 0.5s ease;
-  /* transform: translate3D(calc(clamp(15rem, 30vw, 40rem) * -1), 0, 0rem); */
+  height: clamp(7rem, 85%, 10rem);
   cursor: pointer;
-  }  .gyosa_san_ctnr .box img {
+  transition:transform 0.3s ease;
+  transform:scale(1);
+  transform-origin: center;
+  } .gyosa_san_ctnr .box:active {
+    transition:transform 0.03s ease;
+    transform:scale(1.05);
+  } .gyosa_san_ctnr .box img {
   width: 100%;
   object-fit: contain;
   height: 100%;
-  position: absolute;
 } .gyoza_san.step1 {
-} .gyosa_san_ctnr .click_me {
-  
-position: absolute;
-  
-top: calc(clamp(20%, calc(19vh - 35vw), 150%) * -1);
-  
-right: calc(clamp(2rem, 75%, 80%) * -1);
-  
-/* transform: translate(clamp(2rem, 25vw, 80%), calc(clamp(100%, calc(27vh - 35vw), 150%) * -1)); */
-  
-transform:translateY(0%);
-  
-opacity:1;
-  
-visibility: visible;
-  
-color: var(--light);
-  
-background-color: #101010;
-  
-padding: clamp(0.2rem, 1.5vw, 0.4rem) clamp(0.3rem, 2.5vw, 0.6rem);
-  
-text-align: center;
-  
-font-weight: 300;
-  
-font-size: clamp(0.6rem, 3vw, 0.75rem);
-  
-white-space: nowrap;
-  
-border-radius: 0.2rem;
-  
-border: 0.1rem solid #333;
-  
-user-select: none;
-  
-transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
-}  .gyosa_san_ctnr .click_me::before {
-  content:'';
-  position:absolute;
-  bottom: -0.5rem;
-  left: 0.1rem;
-  border-right: 0.4rem solid #333;
-  border-top: 0.4rem solid #0000;
-  border-left: 0.4rem solid #0000;
-  border-bottom: 0.4rem solid #0000;
-  transform: rotate(45deg);
-  z-index: -1;
-} .gyosa_san_ctnr .click_me.hidden {
-  opacity:0;
-  visibility: hidden;
-  transform:translateY(50%);
-}
+} 
   
 
 
@@ -1160,7 +1109,7 @@ color: var(--light);
 
 .about_us_ctnr {
 
-padding: clamp(1rem, 8vw, 5rem);
+padding: clamp(1rem, 8vw, 3rem);
 
 box-sizing: border-box;
 

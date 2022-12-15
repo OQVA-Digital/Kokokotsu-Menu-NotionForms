@@ -97,3 +97,14 @@
                 }
             })
         }
+
+
+
+        
+document.onreadystatechange = function () {
+    if (document.readyState == "interactive" || document.readyState == "complete") {
+        iframeCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
+        showingIframe = true;
+    }
+}
+
