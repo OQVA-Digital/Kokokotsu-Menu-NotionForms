@@ -7,13 +7,15 @@ gyozaSanImg = document.querySelector('.gyoza_san')
 
 let itsRaining = false;
 
-gyozaSanBox.addEventListener("click", function() {
-    
+var powerSFX = new Audio('assets/power_sfx.mp3');
 
+gyozaSanBox.addEventListener("click", function() {
     if(itsRaining == false) {
 
         setTimeout(() => {
             gyozaSanImg.setAttribute('src', 'assets/gyoza-san-02.gif')
+    
+            powerSFX.play();
     
             setTimeout(() => {
                 gyozaSanImg.setAttribute('src', 'assets/gyoza-san-01.gif')
