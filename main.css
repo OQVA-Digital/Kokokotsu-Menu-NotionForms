@@ -191,7 +191,7 @@ html,
   z-index: 8;
   pointer-events: none;
 } .neon {
-  width: clamp(0.15rem, 0.8vw, 0.2rem);
+  width: clamp(0.15rem, 0.8vw, 0.25rem);
 } .neon:after {
   content: '';
   filter: blur(1.4rem);
@@ -650,7 +650,7 @@ select:-webkit-autofill:focus {
   height: 100%;
   box-sizing: border-box;
 } .side_section .neon {
-  left: calc(clamp(0.15rem, 0.8vw, 0.2rem) * -1);
+  left: calc(clamp(0.15rem, 0.8vw, 0.25rem) * -1);
   pointer-events: none;
 } .side_section .logo_cart {
   width: 100%;
@@ -658,7 +658,8 @@ select:-webkit-autofill:focus {
 } .side_section iframe {
   overflow: auto;
   margin-bottom: 2rem;
-} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;z-index: 20;}
+  z-index: 20;
+} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;}
 
 .menu_address_ctnr .sticky_ctnr {
   position: sticky;
