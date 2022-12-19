@@ -13,9 +13,13 @@
             if(showingSideCtnr == false) {
                 sideSec.style.transform = 'translate3d(0%, 0%, 0)';
                 showingSideCtnr = true;
+
+                document.body.style.overflow = 'hidden'
             } else {
                 sideSec.style.transform = 'translate3d(100%, 0%, 0)';
                 showingSideCtnr = false;
+
+                document.body.style.overflow = 'unset'
             }
         }
 

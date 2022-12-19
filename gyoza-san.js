@@ -20,7 +20,7 @@ gyozaSanBox.addEventListener("click", function() {
             setTimeout(() => {
                 gyozaSanImg.setAttribute('src', 'assets/gyoza-san-01.gif')
             }, 10000);
-        }, 350);
+        }, 300);
 
         for(i=0;i<allGyozas.length;i++) {
 

@@ -656,8 +656,9 @@ select:-webkit-autofill:focus {
   width: 100%;
 } .iframe_ctnr {
 } .side_section iframe {
+  overflow: auto;
   margin-bottom: 2rem;
-} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;}
+} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;z-index: 20;}
 
 .menu_address_ctnr .sticky_ctnr {
   position: sticky;
