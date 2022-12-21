@@ -20,6 +20,18 @@
                 showingSideCtnr = false;
 
                 document.body.style.overflow = 'unset'
+
+                if(showingIframe == false) {
+                
+                    iframeCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
+    
+                    showingIframe = true;
+    
+                    workWithUsCtnr.classList.remove('show_side_content')
+                    eventsCtnr.classList.remove('show_side_content')
+                    contactCtnr.classList.remove('show_side_content')
+                    aboutUsCtnr.classList.remove('show_side_content')
+                }
             }
         }
 
@@ -31,6 +43,7 @@
                 showingSideCtnr = false;
                 
                 iframeCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'
+
                 showingIframe = true;
 
                 workWithUsCtnr.classList.remove('show_side_content')
@@ -104,7 +117,9 @@
 
 
 
-        
+
+let UrlParameters = new URLSearchParams(document.location.search);
+
 document.onreadystatechange = function () {
     if (document.readyState == "interactive" || document.readyState == "complete") {
         iframeCtnr.innerHTML = '<iframe style="border:none;width:100%;" height="900px" src="https://notionforms.io/forms/make-your-order-kokokotsu"></iframe>'

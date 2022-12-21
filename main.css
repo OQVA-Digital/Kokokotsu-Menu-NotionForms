@@ -253,7 +253,7 @@ html,
     padding: 0 clamp(0rem, 2vw, 3rem) clamp(1rem, 8vw, 1.5rem) clamp(1.5rem, 9vw, 3rem);
     margin-left: calc(clamp(1.5rem, 9vw, 3rem) * -1);
     box-sizing: border-box;
-    max-width: 38rem;
+    /* max-width: 38rem; */
     flex: 1;
     position: relative;
     z-index: 3;
@@ -464,9 +464,9 @@ z-index: 10;
   animation: gyoza-san-intro-X 1.2s cubic-bezier(0, 0, 0.2, 1) 1;
   position: absolute;
   bottom: 0;
-  width: clamp(7rem, 42vw, 10rem);
+  width: clamp(7rem, 42vw, 9.5rem);
   left: 0;
-  height: clamp(7rem, 85%, 10rem);
+  height: clamp(7rem, 85%, 9.5rem);
   cursor: pointer;
   transition:transform 0.3s ease;
   transform:scale(1);
@@ -626,7 +626,7 @@ select:-webkit-autofill:focus {
   width: calc(100% - clamp(0.15rem, 0.8vw, 0.2rem));
   max-width: 37rem;
   z-index: 12;
-  transition: transform 0.45s cubic-bezier(0.39, 0.58, 0.57, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.4, 0.9);
   transform: translateX(100%);
   background-color: var(--dark);
   background-image: url(assets/noise.jpg);
@@ -637,7 +637,7 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: clamp(0.9rem, 1vw, 0.97rem);
+  font-size: clamp(0.9rem, 1vw, 0.98rem);
 } .side_section > .content {
   font-size: clamp(0.7rem, 3.6vw, 1rem);
   color: var(--light);
@@ -659,7 +659,7 @@ select:-webkit-autofill:focus {
   overflow: auto;
   margin-bottom: 2rem;
   z-index: 20;
-} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 2rem;height: 79vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;}
+} .side_section iframe, .iframe_ctnr, .events_ctnr, .contact_ctnr {position: relative;top: 1.5rem;height: 80vh;max-width: 40rem;width: 100%;border-radius: 0.6rem;}
 
 .menu_address_ctnr .sticky_ctnr {
   position: sticky;
@@ -1033,7 +1033,7 @@ flex-direction: column;
 
 gap: clamp(0.8rem, 2vw, 1rem);
 
-max-width: 38rem;
+/* max-width: 38rem; */
 
 justify-content: space-evenly;
 
@@ -1088,74 +1088,145 @@ background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.a
 background-position: center;
   
 background-size: clamp(26vh, 16vw, 30vh);
-} .nav_bts div[role='button']:hover {
+} .about_us_ctnr .nav_bts div[role='button'] {
   
-box-shadow: 0 0.1rem var(--lightb), 0 0rem 0 -1rem var(--lightb), 0 2rem 2rem var(--dark);
+background-image: unset;
+  
+background-color: #0D0D0D;
+  
+border-color: #1A1A1A;
+  
+padding: 0.8rem 0.3rem;
+  
+box-shadow: 0 0.2rem #1A1A1A;
+} .nav_bts div[role='button']:hover {
   
 border-color:var(--lightb);
   
 transition: border-color 0.06s ease, box-shadow 0.06s ease;
+} #who-we-are-bt {
+  /* border-color: var(--c1); */
+  /* border: 0.1rem solid #444; */
 }
 
 .side_section_ctnr {
+position: absolute;
+opacity:0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+z-index: 18;
+color: var(--light);
+}
 
-position: absolute;
+.side_section_ctnr .gif {
+  
+margin: 3rem auto;
+  
+display: block;
+}
+.side_section_ctnr .gif.medium {
+width: clamp(13rem, 68vw, 16rem);
+margin: 3rem auto;
+}
 
-opacity:0;
+.fw_img.intro {
+  background-image: url(assets/product-shot-01.jpg);
+  height: 13rem;
+} .fw_img {
+  
+} .fw_img.graphic1 {
+  background-image: url(assets/gyoza1.jpg);
+  height: 20rem;
+  display: -webkit-inline-box;
+  /* position: static; */
+  /* -webkit-backface-visibility: hidden; */
+  position: relative;
+  top: 0;
+  margin: 2rem 0;
+  overflow: hidden;
+  background-repeat: space;
+}
 
-visibility: hidden;
+.fw_img {
+  background-position: center;
+  background-size: cover;
+  width:100%;
+}
 
-transition: opacity 0.3s ease, visibility 0.3s ease;
-
-z-index: 11;
-
-color: var(--light);
+.fw_img.graphic1.fixed {
 }
 
 .about_us_ctnr {
-
-padding: clamp(1rem, 8vw, 3rem);
 
 box-sizing: border-box;
 
 height: calc(100vh - clamp(4rem, 20vw, 5rem));
 
 overflow: auto;
+} .about_us_ctnr .nav_bts {
+  
+position: sticky;
+  
+bottom: 1rem;
+  
+width: clamp(91%, 80vw, 95%);
+  
+margin: 2.7rem auto;
 } .about_us_ctnr picture, .about_us_ctnr img {
   
 width: 100%;
   
-border-radius: 0.3rem;
-  
-margin-bottom: 2rem;
+object-fit: contain;
 } .about_us_ctnr .flex.wrap {
   gap:1rem;
   margin-bottom: 1rem;
 } .about_us_ctnr p {
-
-margin-bottom: 1rem;
-
-line-height: 1.65;
-
-color: #DDD;
-
-font-weight: 300;
+margin-bottom: 1rem;
+line-height: 1.65;
+color: #EEE;
+font-weight: 100;
+text-align: justify;
+letter-spacing: -0.03rem;
 }  .about_us_ctnr h1 {
 
-margin-bottom: 1.4rem;
+margin: 3rem 0 1.4rem;
 
 font-weight: 500;
 
 font-size: 1.2rem;
 } .about_us_ctnr p strong, .about_us_ctnr p b {
-
-font-weight: 300;
-
-color: var(--light);
+font-weight: 100;
+/* color: var(--light); */
+background-color: #131313;
+} .about_us_ctnr .ctnr {
+  
+width: 85%;
+  
+margin: 0 auto;
 } .social_img {
   max-width: 26rem;
-  margin: 3rem auto 0;
+  height: 29rem;
+  margin: 2rem auto 5rem;
   display: block;
+  width: 85%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-image: url(assets/insta-post.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+} .hand_gyoza {
+  background-image: url(assets/hand-gyoza.png);
+  position: relative;
+  height: clamp(20rem, 91vw, 30rem);
+  width: 100%;
+  margin: 0 0 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  margin-top: -30%;
+  pointer-events: none;
+  filter: drop-shadow(0.9rem -0.6rem rgb(10 7 11 / 90%));
 }
 
 .side_section > div.show_side_content {
@@ -1592,12 +1663,12 @@ margin: 0.6rem 0 0;
     bottom: clamp(2.5rem, 2vh, 3.5rem);
     left: clamp(1.5rem, 8vw, 12rem);
     right: unset;
-    max-width: 38rem;
+    /* max-width: 38rem; */
     height: 3.1rem;
     font-size: 0.9rem;
   } .side_section {
     width: clamp(15rem, 83vw, 46rem);
-    transition: transform 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.4, 0.9);
     max-width: unset;
   } .side_section .logo_cart {
     width: 91%;
@@ -1624,6 +1695,12 @@ margin: 0.6rem 0 0;
         transform: translate3d(-100vw, 150vh, 0);
       }
     } */
+
+
+    .side_section_ctnr .gif.medium {
+      float: left;
+      margin: 1rem 2rem 2rem 0;
+    }
 }
 
 
