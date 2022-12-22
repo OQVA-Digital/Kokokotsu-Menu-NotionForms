@@ -137,12 +137,12 @@ let touchstartX = 0
 let touchendX = 0
     
 function checkDirection() {
-  if((touchendX + 100) < touchstartX) {
+  if((touchendX + 70) < touchstartX) {
     if(showingSideCtnr == false) {
         toggleSlide()
     }
   } 
-  if(touchendX > (touchstartX + 100)) {
+  if(touchendX > (touchstartX + 70)) {
     if(showingSideCtnr == true) {
         toggleSlide()
     }
