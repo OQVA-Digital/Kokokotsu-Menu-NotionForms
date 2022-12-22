@@ -164,9 +164,10 @@ html,
   background-image: linear-gradient(90deg, #fb0094, #00f, #0f0,#ff0, #fb0094);
   z-index: -1;
   border-radius: 0.3rem;
-  animation: steamBt 9s linear infinite;
-  background-size: 55%;
+  animation: steamBt 3s linear infinite;
+  background-size: 75%;
   background-position: 0 0;
+  opacity: 0.7;
 }
 
 .neon, .neon:after, .neon:before {
@@ -338,6 +339,7 @@ html,
     -webkit-text-fill-color: #0000;
     user-select: none;
     font-weight: 600;
+    letter-spacing: -0.05rem;
   } .about_us_ctnr h1 span {
     
 font-size: 2em;
@@ -1061,42 +1063,24 @@ flex: 1;
   
 flex-flow: row wrap;
 } .nav_bts div[role='button'] {
-  
-text-align: center;
-  
-display: block;
-  
-display: flex;
-  
-justify-content: center;
-  
-align-items: center;
-  
-flex: 1;
-  
-padding: 1rem 0.6rem;
-  
-border: 0.1rem solid #2A2A2A;
-  
-border-radius: 0.3rem;
-  
-font-size: 0.85rem;
-  
-white-space: nowrap;
-  
-transition: border-color 0.3s ease;
-  
-cursor: pointer;
-  
-user-select: none;
-  
-background-image: url(assets/noise.jpg);
-  
-background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
-  
-background-position: center;
-  
-background-size: clamp(26vh, 16vw, 30vh);
+  text-align: center;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 1rem 0.6rem;
+  border: 0.1rem solid #2A2A2A;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  background-image: url(assets/noise.jpg);
+  background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
+  background-position: center;
+  background-size: clamp(26vh, 16vw, 30vh);
 } .about_us_ctnr .nav_bts div[role='button'] {
   
 background-image: unset;
@@ -1149,7 +1133,7 @@ margin: 3rem auto;
 
 .fw_img.intro {
   background-image: url(assets/product-shot-01.jpg);
-  height: 13rem;
+  height: clamp(10rem, 20vw, 15rem);
 } .fw_img {
   
 } .fw_img.graphic1 {
@@ -1166,7 +1150,7 @@ margin: 3rem auto;
 }
 
 .fw_img {
-  background-position: center;
+  background-position: top;
   background-size: cover;
   width:100%;
 }
@@ -1182,16 +1166,11 @@ height: calc(100dvh - clamp(4rem, 20vw, 5rem));
 
 overflow: auto;
 } .about_us_ctnr .nav_bts {
-  
-position: sticky;
-  
-bottom: 1rem;
-  
-width: clamp(91%, 80vw, 95%);
-  
-margin: 2.7rem auto;
-  
-top: 1rem;
+  position: sticky;
+  bottom: 1rem;
+  width: clamp(91%, 80vw, 95%);
+  margin: 2rem auto 5rem;
+  top: 1rem;
 } .about_us_ctnr picture, .about_us_ctnr img {
   
 width: 100%;
@@ -1236,7 +1215,7 @@ width: 85%;
 margin: 0 auto;
 } .social_img {
   max-width: 26rem;
-  height: 29rem;
+  height: 34rem;
   margin: 2rem auto 5rem;
   display: block;
   width: 85%;
