@@ -127,3 +127,33 @@ document.onreadystatechange = function () {
     }
 }
 
+
+
+
+
+
+
+let touchstartX = 0
+let touchendX = 0
+    
+function checkDirection() {
+  if((touchendX + 100) < touchstartX) {
+    if(showingSideCtnr == false) {
+        toggleSlide()
+    }
+  } 
+  if(touchendX > (touchstartX + 100)) {
+    if(showingSideCtnr == true) {
+        toggleSlide()
+    }
+  }
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
+})

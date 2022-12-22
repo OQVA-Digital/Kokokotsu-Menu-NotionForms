@@ -24,6 +24,8 @@ gyozaSanBox.addEventListener("click", function() {
 
         for(i=0;i<allGyozas.length;i++) {
 
+            allGyozas[i].style.willChange = "transform"
+
             gyozaRainCtnr.style.opacity = 1
             
             allGyozas[i].style.animation = "gyoza_fall " + (Math.random() * (10 - 2 + 1) + 2) +  "s ease-out infinite";
@@ -45,11 +47,10 @@ gyozaSanBox.addEventListener("click", function() {
         
         setTimeout(() => {
             for(i=0;i<allGyozas.length;i++) {
-                allGyozas[i].style.animation = ""
-        
-                allGyozas[i].style.animationDelay = ""
-                
-                allGyozas[i].style.top = ""
+                allGyozas[i].style.animation = "unset"
+                allGyozas[i].style.animationDelay = "unset"
+                allGyozas[i].style.top = "unset"
+                allGyozas[i].style.willChange = "unset"
             }
         }, 400);
         

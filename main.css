@@ -109,33 +109,6 @@ html,
 
 
 
-  .manga_sec {
-    width: 100%;
-    box-sizing: border-box;
-    background-image: url(assets/bg.jpg);
-    background-image: -webkit-image-set(url("assets/bg.jpg") 1x, url("assets/bg.webp") 1x);
-    background-size: cover;
-    background-position: center;
-    min-height: 94vh;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 clamp(6rem, 30vw, 12rem) clamp(6rem, 9vw, 10rem) 0rem var(--dark);
-    border: 0.2rem solid var(--light);
-    overflow: hidden;
-    will-change: transform;
-    transform: translateY(0);
-  }
-
-  .menu_sec {
-    position: relative;
-  }
-  /* .menu_sec .content {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-  } */
-
   
 
 .intro_cta {
@@ -215,7 +188,7 @@ html,
   .logo {
     position: absolute;
     transform: rotate(-90deg) translate(-50%, 150%);
-    width: clamp(45vh, 85vw, 30rem);
+    width: clamp(17rem, 91vw, 30rem);
     max-width: unset;
     right: clamp(1.5rem, 8vw, 10rem);
     z-index: 3;
@@ -226,21 +199,20 @@ html,
 
   .left_ctnr {
     position: absolute;
-    top: clamp(3.5rem, 5vw, 7rem);
+    top: clamp(2.5rem, 5vw, 7rem);
     left: clamp(1.5rem, 9vw, 3rem);
-    bottom: clamp(1.5rem, 7vw, 4rem);
+    /* bottom: clamp(1.5rem, 7vw, 4rem); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 10rem;
+    /* height: 10rem; */
   } .menu_address_ctnr {
     width: clamp(10rem, 83vw, 41rem);
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
     position: relative;
-    top: clamp(21rem, calc(62vw + calc(36vh - 8rem)), 65vh);
     z-index: 2;
     padding-bottom: 8rem;
   } .menu_ctnr {
@@ -314,7 +286,7 @@ html,
     color: var(--light);
     font-weight: 100;
   } .slogan_ctnr {
-    position: absolute;
+    /* position: absolute; */
   } .social_bts {
     display: flex;
     gap: clamp(0.4rem, 3vw, 0.6rem);
@@ -344,10 +316,11 @@ html,
     user-select: none;
     font-weight: 600;
   } .about_us_ctnr h1 span {
-    font-size: 2em;
+    
+font-size: 2em;
   }  .slogan {
     text-transform: uppercase;
-    font-size: clamp(1.6rem, calc(2vh + 2vw), 1.7rem);
+    font-size: clamp(1.5rem, calc(2vh + 2vw), 1.7rem);
   } .flavours {
     list-style-type: square;
     display: flex;
@@ -433,20 +406,14 @@ html,
   }
 
 .gyosa_san_ctnr {
-  
-position: absolute;
-  
-width: clamp(9rem, 55vw, 20rem);
-  
-height: clamp(6rem, calc(130vw - 22rem), 12.5rem);
-  
-left: calc(clamp(1.5rem, 9vw, 3rem) * -0.7);
-  
-bottom: calc(clamp(9rem, calc(28vw + 29vh - 9rem), 17rem) * -1);
-  
-/* border: 0.1rem solid #222; */
-  
-z-index: 10;
+  position: relative;
+  width: clamp(9rem, 55vw, 20rem);
+  height: clamp(10rem, calc(170vw - 110vw), 22.5rem);
+  left: calc(clamp(1.5rem, 9vw, 3rem) * -1);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  /* border: 0.1rem solid #333; */
 }
   
   
@@ -465,11 +432,11 @@ z-index: 10;
 
 .gyosa_san_ctnr .box {
   animation: gyoza-san-intro-X 1.2s cubic-bezier(0, 0, 0.2, 1) 1;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: clamp(7rem, 42vw, 9.5rem);
   left: 0;
-  height: clamp(7rem, 85%, 9.5rem);
+  height: clamp(8rem, 38vw, 9.5rem);
   cursor: pointer;
   transition:transform 0.3s ease;
   transform:scale(1);
@@ -513,7 +480,7 @@ transition: transform 5s ease;
 right: 0;
 top:0;
 right: -30rem;
-will-change: transform;
+/* will-change: transform; */
 } .gyoza_rain_ctnr .gyoza.char1 {
   background-image: url(assets/gyoza-chars/chicken.png);
   background-image: -webkit-image-set(url(assets/gyoza-chars/chicken.png) 1x, url(assets/gyoza-chars/chicken.webp) 1x);
@@ -629,7 +596,7 @@ select:-webkit-autofill:focus {
   width: calc(100% - clamp(0.15rem, 0.8vw, 0.2rem));
   max-width: 37rem;
   z-index: 12;
-  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.4, 0.9);
+  transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.4, 0.9);
   transform: translateX(100%);
   background-color: var(--dark);
   background-image: url(assets/noise.jpg);
@@ -640,7 +607,8 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: clamp(0.8rem, 1vw, 0.98rem);
+  font-size: clamp(0.8rem, 3.2vw, 0.98rem);
+  will-change: transform;
 } .side_section > .content {
   font-size: clamp(0.7rem, 3.6vw, 1rem);
   color: var(--light);
@@ -1078,7 +1046,7 @@ font-size: 0.85rem;
   
 white-space: nowrap;
   
-transition: border-color 0.5s ease, box-shadow 0.5s ease;
+transition: border-color 0.3s ease;
   
 cursor: pointer;
   
@@ -1100,13 +1068,14 @@ background-color: #0D0D0D;
 border-color: #1A1A1A;
   
 padding: 0.8rem 0.3rem;
+} .about_us_ctnr .nav_bts div[role='button']:hover {
   
-box-shadow: 0 0.2rem #1A1A1A;
+border-color: #444;
 } .nav_bts div[role='button']:hover {
   
 border-color:var(--lightb);
   
-transition: border-color 0.06s ease, box-shadow 0.06s ease;
+transition: border-color 0.06s ease;
 } #who-we-are-bt {
   /* border-color: var(--c1); */
   /* border: 0.1rem solid #444; */
@@ -1168,9 +1137,12 @@ margin: 3rem auto;
 }
 
 .about_us_ctnr {
-box-sizing: border-box;
-height: calc(100dvh - clamp(4rem, 20vw, 5rem));
-overflow: auto;
+
+box-sizing: border-box;
+
+height: calc(100dvh - clamp(4rem, 20vw, 5rem));
+
+overflow: auto;
 } .about_us_ctnr .nav_bts {
   
 position: sticky;
@@ -1193,19 +1165,24 @@ object-fit: contain;
 } .about_us_ctnr p {
 margin-bottom: 1rem;
 line-height: 1.75;
-color: #EEE;
+color: #DDD;
 font-weight: 100;
 text-align: justify;
 letter-spacing: -0.02rem;
 }  .about_us_ctnr h1 {
-margin: 2.5rem 0 1.2rem;
-font-weight: 300;
-font-size: clamp(1rem, 5.5vw, 1.3rem);
-text-transform: unset;
-line-height: 1.2;
+
+margin: 2.5rem 0 1.2rem;
+
+font-weight: 300;
+
+font-size: clamp(1rem, calc(11.5vw - 1.5rem), 1.3rem);
+
+text-transform: unset;
+
+line-height: 1.2;
 } .about_us_ctnr p strong, .about_us_ctnr p b {
 font-weight: 100;
-/* color: var(--light); */
+color: var(--light);
 } .about_us_ctnr .ctnr {
   
 width: 85%;
@@ -1553,14 +1530,12 @@ margin: 0 auto;
   }
 
   .gyosa_san_ctnr {
-    
-top: 0;
-    
-right: 3vw;
-    
-left: 8rem;
-    
-width: unset;
+    top: 0;
+    right: 3vw;
+    left: 8rem;
+    width: unset;
+    position: absolute;
+    height: 14rem;
   }
   
   .logo {
@@ -1645,7 +1620,6 @@ width: unset;
     background-color: #ffffff03;
     padding: 1rem 2rem 1rem 2rem;
     display: block;
-    will-change: transform;
   } fieldset legend {
   }
 
@@ -1817,18 +1791,12 @@ margin: 0.6rem 0 0;
 }
 
   .gyosa_san_ctnr {
-    
-top: unset;
-    
-bottom: -9rem;
-    
-left: unset;
-    
-right: 0;
-    
-height: 6rem;
-    
-width: 30vw;
+    top: unset;
+    bottom: 0;
+    left: unset;
+    right: 0;
+    height: 6rem;
+    width: 30vw;
   }
 
   .left_ctnr {
@@ -1851,7 +1819,7 @@ width: 30vw;
   } .address {
     width: clamp(11rem, calc(80vw - 10rem), 32rem);
   } .menu_address_ctnr {
-    height: 80vh;
+    /* height: 80vh; */
     max-height: unset;
     margin: 0 auto;
     top: 1rem;
