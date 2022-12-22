@@ -135,13 +135,20 @@ document.onreadystatechange = function () {
 
 let touchstartX = 0
 let touchendX = 0
+
+let touchstartY = 0
+let touchendY = 0
     
 function checkDirection() {
-  if((touchendX + 70) < touchstartX) {
+  if((touchendX + 70) < touchstartX && touchendY < (touchstartY + 100) && touchendY > (touchstartY - 100)) {
+
+    console.log(touchstartY + ", " + touchendY)
+
     if(showingSideCtnr == false) {
         toggleSlide()
     }
-  } 
+  }
+
   if(touchendX > (touchstartX + 70)) {
     if(showingSideCtnr == true) {
         toggleSlide()
@@ -151,9 +158,11 @@ function checkDirection() {
 
 document.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX
+  touchstartY = e.changedTouches[0].screenY
 })
 
 document.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
+  touchendY = e.changedTouches[0].screenY
   checkDirection()
 })
