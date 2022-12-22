@@ -157,7 +157,7 @@ html,
 
 #who-we-are-bt {
   position: relative;
-  background: #080808;
+  /* background: #080808; */
 } #who-we-are-bt:before {
   content: '';
   position: absolute;
@@ -1064,44 +1064,25 @@ flex: 1;
   
 flex-flow: row wrap;
 } .nav_bts div[role='button'] {
-  
-text-align: center;
-  
-display: block;
-  
-display: flex;
-  
-justify-content: center;
-  
-align-items: center;
-  
-flex: 1;
-  
-padding: 1rem 0.6rem;
-  
-border: 0.1rem solid #2A2A2A;
-  
-border-radius: 0.3rem;
-  
-font-size: 0.85rem;
-  
-white-space: nowrap;
-  
-transition: border-color 0.3s ease;
-  
-cursor: pointer;
-  
-user-select: none;
-  
-/* background-image: url(assets/noise.jpg); */
-  
-/* background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x); */
-  
-background-color: #080808;
-  
-background-position: center;
-  
-background-size: clamp(26vh, 16vw, 30vh);
+  text-align: center;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 1rem 0.6rem;
+  border: 0.1rem solid #2A2A2A;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  background-image: url(assets/noise.jpg);
+  background-image: -webkit-image-set(url(assets/noise.jpg) 1x, url(assets/noise.avif) 1x);
+  background-color: #080808;
+  background-position: center;
+  background-size: clamp(26vh, 16vw, 30vh);
 } .about_us_ctnr .nav_bts div[role='button'] {
   background-image: unset;
   background-color: #0F1115;
