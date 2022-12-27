@@ -149,7 +149,7 @@ function checkDirection() {
     }
   }
 
-  if(touchendX > (touchstartX + 70)) {
+  if(touchendX > (touchstartX + 100) && touchendY > (touchstartY - 50) && touchendY < (touchstartY + 50)) {
     if(showingSideCtnr == true) {
         toggleSlide()
     }

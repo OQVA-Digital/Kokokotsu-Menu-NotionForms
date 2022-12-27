@@ -1222,7 +1222,7 @@ margin: 0 auto;
   margin: 2rem auto 5rem;
   display: block;
   width: 85%;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   overflow: hidden;
   background-image: url(assets/insta-post.jpg);
   background-size: contain;
@@ -1824,18 +1824,13 @@ margin: 0.6rem 0 0;
 }
 
   .gyosa_san_ctnr {
-    
-top: unset;
-    
-bottom: 0;
-    
-left: unset;
-    
-right: 0;
-    
-height: 6rem;
-    
-width: 30vw;
+    top: unset;
+    bottom: -5rem;
+    left: unset;
+    right: 0;
+    height: 6rem;
+    width: 30vw;
+    z-index: 2;
   }
 
   .left_ctnr {
