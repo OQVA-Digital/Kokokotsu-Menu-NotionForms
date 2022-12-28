@@ -127,10 +127,10 @@ html,
   content: '';
   position: absolute;
   inset: -0.15rem;
-  background-image: linear-gradient(90deg, #fb0094, #00f, #0f0,#ff0, #fb0094);
+  background-image: linear-gradient(90deg, #fb0094, #0ff, #ff0, #fb0094);
   z-index: -1;
   border-radius: 0.3rem;
-  animation: steamBt 2.5s linear infinite;
+  animation: steamBt 2s linear infinite;
   background-size: 76%;
   background-position: 0 0;
   opacity: 0.8;
@@ -170,7 +170,7 @@ html,
 		background-position: 0 0;
 	}
 	100% {
-		background-position: 608% 0;
+		background-position: 660% 0;
 	}
 }
 
@@ -307,7 +307,8 @@ html,
     font-weight: 600;
     letter-spacing: -0.05rem;
   } .about_us_ctnr h1 span {
-    font-size: 1.9em;
+    
+font-size: 1.9em;
   }  .slogan {
     text-transform: uppercase;
     font-size: clamp(1.5rem, calc(2vh + 2vw), 1.7rem);
@@ -662,7 +663,7 @@ select:-webkit-autofill:focus {
 
 .nav_bts {
 
-color: #DDD;
+color: #EEE;
 
 display: flex;
 
@@ -779,7 +780,8 @@ margin: 3rem auto;
 
 .fw_img.intro {
   background-image: url(assets/product-shot-01.jpg);
-  height: clamp(10rem, 20vw, 15rem);
+  height: clamp(10rem, 20vw, 14rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 } .fw_img {
   
 } .fw_img.graphic1 {
@@ -844,13 +846,20 @@ text-align: justify;
 
 letter-spacing: -0.02rem;
 }  .about_us_ctnr h1 {
-margin: 2.5rem 0 1.2rem;
-font-weight: 300;
-font-size: clamp(1rem, calc(11.5vw - 1.5rem), 1.4rem);
-text-transform: unset;
-line-height: 1.2;
-display: flex;
-flex-direction: column;
+
+margin: 2.5rem 0 1.2rem;
+
+font-weight: 300;
+
+font-size: clamp(1rem, calc(11.5vw - 1.5rem), 1.4rem);
+
+text-transform: unset;
+
+line-height: 1.2;
+
+display: flex;
+
+flex-direction: column;
 } .about_us_ctnr p strong, .about_us_ctnr p b {
 
 font-weight: 100;
@@ -1328,7 +1337,7 @@ margin: 0.6rem 0 0;
     font-size: 0.9rem;
   } .side_section {
     width: clamp(15rem, 83vw, 46rem);
-    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.4, 0.9);
+    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.4, 0.9);
     max-width: unset;
   } .side_section .logo_cart {
     width: 91%;
@@ -1363,9 +1372,12 @@ margin: 0.6rem 0 0;
     }
 
     .about_us_ctnr h1 {
-      flex-direction: revert;
-      align-items: center;
-      gap: 1.3rem;
+      
+flex-direction: revert;
+      
+align-items: center;
+      
+gap: 1.3rem;
     }
 }
 
