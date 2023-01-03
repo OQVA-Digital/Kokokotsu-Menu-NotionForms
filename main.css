@@ -362,7 +362,7 @@ align-items: center;
   bottom: 0;
   width: clamp(7rem, 42vw, 9.5rem);
   left: 0;
-  height: clamp(8rem, 38vw, 9.5rem);
+  height: clamp(8rem, 38vw, 8.5rem);
   cursor: pointer;
   transition:transform 0.3s ease;
   transform:scale(1);
@@ -807,12 +807,9 @@ margin: 3rem auto;
 }
 
 .about_us_ctnr {
-
-box-sizing: border-box;
-
-height: calc(100dvh - clamp(4rem, 20vw, 5rem));
-
-overflow: auto;
+box-sizing: border-box;
+height: calc(100dvh - clamp(4rem, 20vw, 5rem));
+overflow: auto;
 } .about_us_ctnr .nav_bts {
   
 position: sticky;
@@ -871,21 +868,18 @@ width: 85%;
   
 margin: 0 auto;
 } .social_img {
-  max-width: 26rem;
-  height: 34rem;
   margin: 2rem auto 5rem;
   display: block;
-  width: 85%;
-  border-radius: 0.6rem;
   overflow: hidden;
-  background-image: url(assets/insta-post.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: clamp(13rem, 75vw, 23rem);
+} .social_img img {
+  border-radius: 0.6rem;
+  height: calc(clamp(13rem, 75vw, 23rem) * 1.78);
+  display: block;
 } .hand_gyoza {
   background-image: url(assets/hand-gyoza.png);
   position: relative;
-  height: clamp(20rem, 91vw, 30rem);
+  height: clamp(20rem, 91vw, 34rem);
   width: 100%;
   margin: 0 0 0 auto;
   background-repeat: no-repeat;
