@@ -406,6 +406,7 @@ transition: transform 5s ease;
 right: 0;
 top:0;
 right: -30rem;
+  display: none;
 /* will-change: transform; */
 } .gyoza_rain_ctnr .gyoza.char1 {
   background-image: url(assets/gyoza-chars/chicken.png);
@@ -423,6 +424,8 @@ right: -30rem;
   background-image: url(assets/gyoza-chars/vegetable.png);
   background-image: -webkit-image-set(url(assets/gyoza-chars/vegetable.png) 1x, url(assets/gyoza-chars/vegetable.webp) 1x);
 }
+
+
 
 @keyframes gyoza_fall {
   0% {
@@ -518,6 +521,8 @@ select:-webkit-autofill:focus {
   height: calc(100dvh - clamp(4rem, 20vw, 5rem) - 4dvh);
   top: 4dvh;
   overflow: hidden;
+  padding-bottom: 4dvh;
+  box-sizing: border-box;
 } .events_ctnr, .contact_ctnr {
   height: calc(100dvh - clamp(4rem, 20vw, 5rem));
 }
@@ -669,7 +674,7 @@ display: flex;
 
 flex-direction: column;
 
-gap: clamp(0.8rem, 2vw, 1rem);
+gap: clamp(0.8rem, 6vw, 1.4rem);
 
 /* max-width: 38rem; */
 
@@ -684,7 +689,7 @@ width: 100%;
   
 display: flex;
   
-gap: clamp(0.8rem, 2vw, 1rem);
+gap: clamp(0.8rem, 6vw, 1.4rem);
   
 flex: 1;
   
@@ -780,6 +785,7 @@ margin: 3rem auto;
 
 .fw_img.intro {
   background-image: url(assets/product-shot-01.jpg);
+  background-image: -webkit-image-set(url(assets/product-shot-01.jpg) 1x, url(assets/product-shot-01.webp) 1x);;
   height: clamp(10rem, 20vw, 14rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 } .fw_img {
@@ -807,9 +813,12 @@ margin: 3rem auto;
 }
 
 .about_us_ctnr {
-box-sizing: border-box;
-height: calc(100dvh - clamp(4rem, 20vw, 5rem));
-overflow: auto;
+
+box-sizing: border-box;
+
+height: calc(100dvh - clamp(4rem, 20vw, 5rem));
+
+overflow: auto;
 } .about_us_ctnr .nav_bts {
   
 position: sticky;
